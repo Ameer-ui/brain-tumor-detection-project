@@ -26,7 +26,7 @@ def train_model(train_generator, test_generator):
     # Train
     history = model.fit(
         train_generator,
-        epochs=10,
+        epochs=1,
         validation_data=test_generator,
         verbose=1
     )
