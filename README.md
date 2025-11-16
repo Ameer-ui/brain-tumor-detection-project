@@ -1,2 +1,17 @@
-# brain-tumor-detection-project
-Brain Tumor MRI Classification
+# Brain Tumor Detection Project Setup
+- **Environment Setup**:
+  - Install dependencies: `pip install -r requirements.txt`
+  - Requirements: tensorflow==2.15.0, numpy==1.24.3, matplotlib==3.7.1, opencv-python==4.8.0, pillow==9.5.0, streamlit==1.24.0
+- **Directory Structure**:
+  - `data/`: Contains `Training/` and `Testing/` folders with subfolders for each class (glioma, meningioma, notumor, pituitary).
+  - `models/`: Stores trained model (`multi_class_model.h5`).
+  - `src/`: Contains scripts (`data_loader.py`, `test_model_training.py`, `test_prediction.py`, `streamlit_app.py`).
+  - Root contains output images: `multi_class_samples.png`, `multi_class_training_history.png`, `prediction_result_Tr-*.jpg`.
+- **Running Scripts**:
+  - Run `python src/data_loader.py` to generate `multi_class_samples.png`.
+  - Run `python src/test_model_training.py` to train the model and save `multi_class_model.h5` and `multi_class_training_history.png`.
+  - Run `python src/test_prediction.py` to generate prediction images (`prediction_result_Tr-*.jpg`).
+  - (Optional) Run `streamlit run src/streamlit_app.py` for interactive predictions.
+- **Notes**:
+  - Ensure `data/Training` and `data/Testing` have all class subfolders with images.
+  - If TensorFlow warnings appear, set `export TF_ENABLE_ONEDNN_OPTS=0` to suppress (optional).
