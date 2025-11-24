@@ -1,0 +1,8 @@
+# Never upload these
+models/
+*.keras
+*.h5
+*.jpg
+*.png
+__pycache__/
+*.pyc
