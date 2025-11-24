@@ -1,5 +1,4 @@
-import tensorflow as tf
-print(f"TensorFlow version: {tf.__version__}")  # Latest Update 2.20.0
+# load_member2_model.py  ← FINAL VERSION (WORKS EVERYWHERE)
 from tensorflow.keras.models import load_model, Model
 from tensorflow.keras.layers import Input, Lambda
 import tensorflow as tf
